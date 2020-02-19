@@ -1,0 +1,42 @@
+{
+  "name": "@feizheng/next-ant-column",
+  "version": "1.0.0",
+  "description": "Ant table coumn for next.",
+  "homepage": "https://github.com/afeiship/next-ant-column",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "scripts": {
+    "build": "gulp",
+    "test": "jest",
+    "start": "node ./express.js"
+  },
+  "main": "dist/next-ant-column.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@feizheng/gulp-pkg-header": "^1.0.2",
+    "@feizheng/rake-git": "^1.2.1",
+    "del": "^5.1.0",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-header": "^2.0.9",
+    "gulp-ignore": "^3.0.0",
+    "gulp-load-plugins": "^2.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "uglify-save-license": "^0.4.1",
+    "yargs": "^15.1.0"
+  },
+  "dependencies": {
+    "@feizheng/next-js-core2": "^2.4.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
