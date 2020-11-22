@@ -3,7 +3,7 @@
  * description: Ant table coumn for next.
  * homepage: https://github.com/afeiship/next-ant-column
  * version: 1.0.0
- * date: 2020-11-22 16:28:04
+ * date: 2020-11-22 16:29:41
  * license: MIT
  */
 
