@@ -2,12 +2,20 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
 
-  nx.antColumn = function (inTitle, inKey, inCallback, inOptions) {
+
+  nx.antColumn = function (inTarget, inKey, inCallback, inOptions) {
+    if (Array.isArray(inTarget)) {
+      return inTarget.map(function (title) {
+        return nx.antColumn(title, inKey, inCallback, inOptions);
+      });
+    }
+
+    var key = inKey || inTarget;
     return nx.mix(
       {
-        title: inTitle,
-        key: inKey,
-        dataIndex: inKey,
+        title: inTarget,
+        key: key,
+        dataIndex: key,
         render: inCallback || nx.stubValue
       },
       inOptions

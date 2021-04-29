@@ -3,9 +3,20 @@
 
   describe('api.basic test', () => {
     test('nx.antColumn', function () {
-      const obj1 = { name: 'fei' };
-      const obj2 = { email: '1290657123@qq.com' };
-      const result = {};
+      var res = nx.antColumn('标题', 'title', (text) => text, { width: '20%' });
+      console.log(res);
     });
+
+    test('nx.antColum support array options', ()=>{
+      var res = nx.antColumn([
+        'title',
+        'summary',
+        'content',
+        'updated_at',
+        'created_at'
+      ]);
+
+      console.log(res);
+    })
   });
 })();
