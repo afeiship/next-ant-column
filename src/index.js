@@ -2,7 +2,6 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
 
-
   nx.antColumn = function (inTarget, inKey, inCallback, inOptions) {
     if (Array.isArray(inTarget)) {
       return inTarget.map(function (title) {
