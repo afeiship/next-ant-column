@@ -1,6 +1,7 @@
 (function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
+  var DOT = '.';
 
   nx.antColumn = function (inTarget, inKey, inCallback, inOptions) {
     if (Array.isArray(inTarget)) {
@@ -10,12 +11,18 @@
     }
 
     var key = inKey || inTarget;
+    var defaultCallback = key.includes(DOT)
+      ? function (_, record) {
+          return nx.get(record, key);
+        }
+      : nx.stubValue;
+
     return nx.mix(
       {
         title: inTarget,
         key: key,
         dataIndex: key,
-        render: inCallback || nx.stubValue
+        render: inCallback || defaultCallback
       },
       inOptions
     );
